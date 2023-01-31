@@ -1,0 +1,53 @@
+.background {
+    background-color:rgb(134, 129, 227);
+    height: 100vh;
+    width: 100vw;
+}
+.header {
+    padding: 1rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    box-shadow: 10px;
+}
+
+.title, .subtitle {
+    text-shadow: 2px 2px white;
+    font-family: "audiowide";;
+    font-size: 500%;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.background {
+    background-image: url(https://media.self.com/photos/5e70f72443731c000882cfe7/4:3/w_2560%2Cc_limit/GettyImages-125112134.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input {
+    all: unset;
+    
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+
+  .box {
+    opacity: 10%
+  }
