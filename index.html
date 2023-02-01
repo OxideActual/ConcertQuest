@@ -2,54 +2,75 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ConcertQuest</title>
-    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3844/3844724.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConcertQuest</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3844/3844724.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
 <body>
-    <main>
-        <div class="background">
-            <header>
-            </header>
-            <body>
-                  <div class="rectangle">
-                        <h1 class="title">ConcertQuest</h1>
-                        <h1 class="subtitle">Discover concerts near you!</h1>
-                    </div>
-                    <div class="container">
-                    <div class="box left">
-                        <form id="form" role="search">
-                            <input type="search" id="query" name="q"
-                             placeholder="Search..."
-                             aria-label="Search through site content">
-                             <button class="button is-danger has-text-white">Find Concerts</button>
+    <main>
+        <div class="background">
+            <header>
+            </header>
+            <body>
+                  <div class="rectangle">
+                        <h1 class="title">ConcertQuest</h1>
+                        <h1 class="subtitle">Discover concerts near you!</h1>
+                    </div>
+                    <div clas="row">
+                    <div class="column left">
+                        <button class="button is-danger has-text-white" onclick="getEvents()">Find Concerts</button>
+                        <form id="form" role="search">
+                            <input type="search" id="query" name="q"
+                             placeholder="Search..."
+                             aria-label="Search through site content">
+                            <button>Search</button>
+                        </form>
+                        <p>Upcoming events:</p>
+                        <ul id="events">
+                        </ul>
+                        <button class="button is-danger has-text-white" type="submit">Get Artists</button>
+                        <form id="ArtistForm" role="search">
+                            <input 
+                             type="search" 
+                             id="artistSearch" 
+                             name="artistSearch"
+                             placeholder="Search..."
+                             >
+                        </form>
+                        <p>Artists:</p>
+                        <ul id="artistsList"></ul>
+                    </div>
+                    <div class="column right">
+                        <button class="button is-danger has-text-white">Get Directions</button>
+                        <form id="form" role="search">
+                            <input type="search" id="query" name="q"
+                             placeholder="Search..."
+                             aria-label="Search through site content">
+                            <button>Get Directions</button>
+                          </form>
+                        </div>    
+                        
+                    <!-- Map div -->
+                     <!--
 
-                          </form>
-                    </div>
-                    <div class="box right">
 
-                        <form id="form" role="search">
-                            <input type="search" id="query" name="q"
-                             placeholder="Search..."
-                             aria-label="Search through site content">
-                             <button class="button is-danger has-text-white">Get Directions</button>
-                            
-                          </form>
-                    </div>
-            </body>
-             
-                
-        </div>
-    </main>
+  <div id="map"></div>
+                       <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMDalESnrsDy9wdfvtFHL_7_7wj8Ii0yc&callback=initMap">
+</script>
 
-
+   -->
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
 </html>
